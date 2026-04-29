@@ -76,24 +76,7 @@ import 'package:practica_herencia_y_polimorfismo/Clases%20Hijas/Empleado%20admin
           print("No hay empleados.");
           continue;
         }
-
-        //double total = 0;
-        //double mayor = 0;
-      // Empleado? mejor;
-
-        //for (var emp in empleados) {
-          //emp.mostrarInfo();
-
-          //double salario = emp.calcularSalario();
-          //total += salario;
-
-          //if (salario > mayor) {
-            //mayor = salario;
-            //mejor = emp;
-          //}
-        //}
-
-        //double promedio = total / empleados.length;
+        
         double total = 0;
         Empleado mejor = empleados.first;
         double mayor = mejor.calcularSalario();
@@ -120,9 +103,6 @@ import 'package:practica_herencia_y_polimorfismo/Clases%20Hijas/Empleado%20admin
         mejor.mostrarInfo();
        }
 
-        //mejor?.mostrarInfo();
-      ///}
-
       else if (opcion == 3) {
        break;
       }
@@ -133,4 +113,4 @@ import 'package:practica_herencia_y_polimorfismo/Clases%20Hijas/Empleado%20admin
     }
   }
     
-  //}
+  
