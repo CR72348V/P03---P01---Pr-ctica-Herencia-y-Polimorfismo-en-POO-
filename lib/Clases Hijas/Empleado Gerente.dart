@@ -3,14 +3,22 @@ import 'package:practica_herencia_y_polimorfismo/Clase%20principal/Empleado.dart
 class EmpleadoGerente extends Empleado {
   double _porcentajeComision;
 
-  double get porcentajeComision => _porcentajeComision;
-
   EmpleadoGerente(
     String nombre,
     int edad,
     double salarioBase,
-    this._porcentajeComision,
-  ) : super(nombre, edad, salarioBase);
+    double porcentajeComision
+  ) : _porcentajeComision = _comprobarPorcentajeComision(porcentajeComision),
+      super(nombre, edad, salarioBase);
+
+  static double _comprobarPorcentajeComision(double porcentajeComision){
+    if(porcentajeComision < 0){
+      throw Exception("No existe comision negativa");
+    }
+    return porcentajeComision;
+  }
+
+  double get porcentajeComision => _porcentajeComision; 
   
 
   @override

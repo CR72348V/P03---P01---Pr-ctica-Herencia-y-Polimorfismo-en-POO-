@@ -3,13 +3,15 @@
   int edad;
   double _salarioBase;
 
-  double get salarioBase => _salarioBase;
-
-  Empleado(this.nombre, this.edad, this._salarioBase){
-    if (_salarioBase < 0) {
+  Empleado(this.nombre, this.edad, double salarioBase): _salarioBase = _comprobarSalarioBase(salarioBase); 
+  static double _comprobarSalarioBase(double salarioBase) {
+    if (salarioBase < 0) {
       throw ArgumentError("El salario base no puede ser negativo");
     }
+    return salarioBase;
   }
+
+  double get salarioBase => _salarioBase;
   
    String tipoEmpleado();
    
