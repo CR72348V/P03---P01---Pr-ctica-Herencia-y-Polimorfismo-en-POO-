@@ -1,9 +1,45 @@
-import 'package:practica_herencia_y_polimorfismo/Clase%20principal/Empleado.dart';
-import 'package:practica_herencia_y_polimorfismo/Clases%20Hijas/Empleado%20Gerente.dart';
+import 'package:practica_herencia_y_polimorfismo/Clase_Principal/Empleado.dart';
+import 'package:practica_herencia_y_polimorfismo/Clases_Hijas/Empleado_Gerente.dart';
+import 'package:practica_herencia_y_polimorfismo/Clases_Hijas/Empleado_Operativo.dart';
+import 'package:practica_herencia_y_polimorfismo/Clases_Hijas/Empleado_Administrativo.dart';
 import 'dart:io';
-import 'package:practica_herencia_y_polimorfismo/Clases%20Hijas/Empleado%20Operativo.dart';
-import 'package:practica_herencia_y_polimorfismo/Clases%20Hijas/Empleado%20administrativo.dart';
 
+// void main() {
+//   List<Empleado> empleados = [];
+
+//   bool continuar = true;
+
+//   while (continuar == true) {
+//     print("\n1. Agregar empleado");
+//     print("2. Reporte");
+//     print("3. Salir\n");
+//     print("Selecciona una opción:");
+  
+//     int opcion = int.parse(stdin.readLineSync()!);
+
+//       String nombre;
+//       int edad;
+//       double salarioBase;
+
+//     switch(opcion){
+//       case 1:
+//       stdout.write("Ingresa el nombre del empleado");
+//       nombre = Empleado.comprobarNombre(stdin.readLineSync()!);
+
+//       stdout.write("Ingresa la edad del Empleado $nombre");
+//       edad = Empleado.comprobarEdad(int.parse(stdin.readLineSync()!));
+
+//       stdout.write("Ingresa el salario Base del empleado $nombre");
+//       salarioBase = Empleado.comprobarSalarioBase(double.parse(stdin.readLineSync()!));
+
+      
+    //}
+
+
+//   }
+// }
+
+// 
   void main() {
     List<Empleado> empleados = [];
 
@@ -15,14 +51,23 @@ import 'package:practica_herencia_y_polimorfismo/Clases%20Hijas/Empleado%20admin
       int opcion = int.tryParse(stdin.readLineSync()!) ?? 0;
 
       if (opcion == 1) {
-        print("Nombre:");
-        String nombre = stdin.readLineSync()!;
+        String nombre;
+        int edad;
+        double salarioBase;
+        
+        try{
+          print("Nombre:");
+          nombre = Empleado.comprobarNombre(stdin.readLineSync()!);
 
-        print("Edad:");
-        int edad = int.parse(stdin.readLineSync()!);
+          print("Edad:");
+          edad = Empleado.comprobarEdad(int.parse(stdin.readLineSync()!));
 
-        print("Salario base:");
-        double salarioBase = double.parse(stdin.readLineSync()!);
+          print("Salario base:");
+          salarioBase = Empleado.comprobarSalarioBase(double.parse(stdin.readLineSync()!));
+        }catch(e){
+          print(e);
+          continue;
+        }
 
         print("\nTipo:");
         print("1. Operativo");
@@ -112,5 +157,6 @@ import 'package:practica_herencia_y_polimorfismo/Clases%20Hijas/Empleado%20admin
       }
     }
   }
+    
     
   

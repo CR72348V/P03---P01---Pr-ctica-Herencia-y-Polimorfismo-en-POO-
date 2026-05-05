@@ -1,4 +1,4 @@
-import 'package:practica_herencia_y_polimorfismo/Clase%20principal/Empleado.dart';
+import 'package:practica_herencia_y_polimorfismo/Clase_Principal/Empleado.dart';
 
 class EmpleadoAdministrativo extends Empleado{
   double _bonoAdministrativo;
