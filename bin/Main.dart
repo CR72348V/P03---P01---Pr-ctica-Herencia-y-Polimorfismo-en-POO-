@@ -4,42 +4,6 @@ import 'package:practica_herencia_y_polimorfismo/Clases_Hijas/Empleado_Operativo
 import 'package:practica_herencia_y_polimorfismo/Clases_Hijas/Empleado_Administrativo.dart';
 import 'dart:io';
 
-// void main() {
-//   List<Empleado> empleados = [];
-
-//   bool continuar = true;
-
-//   while (continuar == true) {
-//     print("\n1. Agregar empleado");
-//     print("2. Reporte");
-//     print("3. Salir\n");
-//     print("Selecciona una opción:");
-  
-//     int opcion = int.parse(stdin.readLineSync()!);
-
-//       String nombre;
-//       int edad;
-//       double salarioBase;
-
-//     switch(opcion){
-//       case 1:
-//       stdout.write("Ingresa el nombre del empleado");
-//       nombre = Empleado.comprobarNombre(stdin.readLineSync()!);
-
-//       stdout.write("Ingresa la edad del Empleado $nombre");
-//       edad = Empleado.comprobarEdad(int.parse(stdin.readLineSync()!));
-
-//       stdout.write("Ingresa el salario Base del empleado $nombre");
-//       salarioBase = Empleado.comprobarSalarioBase(double.parse(stdin.readLineSync()!));
-
-      
-    //}
-
-
-//   }
-// }
-
-// 
   void main() {
     List<Empleado> empleados = [];
 
